@@ -20,7 +20,8 @@ const Header = styled.div`
   align-items: flex-end;
   margin-bottom: 10px;
   text-decoration: underline;
-  font-size: 3em;
+  @media (max-width:700px) { font-size: 2em;};
+  @media (min-width:700px) { font-size: 3em;};
 `
 
 const MainSeparator = styled.div`
