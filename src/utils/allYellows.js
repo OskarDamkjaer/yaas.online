@@ -23,7 +23,7 @@ const yellows = [
   "Mustard #FEDC56",
   "Navajo #FFDDAF",
   "Ecru #CEB180",
-  "Pure ‎#FFFF00"
+  "Pure yellow"
 ]
 
 const allYellows = yellows.map(pair => ({name: pair.split(" ")[0], hex: pair.split(" ")[1]}))

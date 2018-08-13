@@ -1,20 +1,34 @@
-import React, { Component } from 'react';
-import YellowBox from './components/YellowBox'
-import itWasAllYellow from './utils/allYellows'
+import React, { Component } from 'react'
+import YellowBoxContainer from './components/YellowBoxContainer'
+import styled from 'styled-components'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Yellow as a service</h1>
-        </header>
-        {
-          itWasAllYellow.map(yellow => <YellowBox name={yellow.name} hex={yellow.hex}/>)
-        }
-      </div>
-    );
+      <MainSeparator>
+        <Header>Yellow as a Service</Header>
+        <YellowBoxContainer/>
+      </MainSeparator>
+    )
   }
 }
 
-export default App;
+const Header = styled.div`
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  font-size: 3em;
+`
+
+const MainSeparator = styled.div`
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+  grid-template-areas: 
+  "header" 
+  "yellows"`
+
+
+export default App

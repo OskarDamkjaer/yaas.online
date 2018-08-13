@@ -4,14 +4,24 @@ import PropTypes from 'prop-types'
 
 const Box = styled.div`
   background-color: ${props => props.hex};
-  width: 300px;
-  height: 140px;
-  `
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+`
+
+const TopDiv = styled.div`
+  flex-grow: 1;
+`
+
+const BottomDiv = styled.div`
+ `
 
 const YellowBox = ({hex, name}) => (
   <div>
     <Box hex={hex}>
-      {name}
+      <TopDiv>{name}</TopDiv>
+      <BottomDiv>{hex}</BottomDiv>
     </Box>
   </div>
 )
