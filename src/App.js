@@ -30,5 +30,4 @@ const MainSeparator = styled.div`
   "header" 
   "yellows"`
 
-
 export default App

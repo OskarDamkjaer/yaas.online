@@ -8,7 +8,8 @@ const Container = styled.div`
   width: calc(100vw - 10px);
   height: calc(100% - 5px);
   display: grid;
-  grid-template: repeat(5, 1fr) / repeat(5, 1fr); 
+  @media (max-width:700px) { grid-template: repeat(13, 1fr) / repeat(2, 1fr)};
+  @media (min-width:700px) { grid-template: repeat(5, 1fr) / repeat(5, 1fr)};
   grid-auto-flow: column;
   grid-gap: 5px;
   margin-left: 5px
